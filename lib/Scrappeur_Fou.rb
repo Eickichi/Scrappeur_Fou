@@ -1,10 +1,9 @@
 require 'nokogiri'
 require 'open-uri'
 
-@page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
-
 def sign
-  symbol = @page.xpath('//td[@class = "text-left col-symbol"]')
+  page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
+  symbol = page.xpath('//td[@class = "text-left col-symbol"]')
   @sign_array = []
 
   symbol.each do |symbol|
@@ -16,7 +15,8 @@ end
 sign
 
 def price
-  value = @page.xpath('//td/a[@class="price"]')
+  page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
+  value = page.xpath('//td/a[@class="price"]')
   @value_array = []
 
   value.each do |value|

@@ -1,6 +1,4 @@
-require_relative '../lib/Scrappeur_Fou.rb'
-require 'nokogiri'
-require 'open-uri'
+require_relative '../lib/Scrappeur_Fou'
 
 describe "for crypto_price" do
     it "should return crypto_price array" do
