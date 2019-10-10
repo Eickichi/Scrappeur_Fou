@@ -10,7 +10,7 @@ def get_townhall_urls
     return townhall_urls_array
   end
 
-get_townhall_urls
+print get_townhall_urls
 
 def get_townhall_names
   @page = Nokogiri::HTML(open("https://www.annuaire-des-mairies.com/val-d-oise.html"))
@@ -21,11 +21,13 @@ def get_townhall_names
     return townhall_names_array
 end
 
-get_townhall_names
+print get_townhall_names
 
 =begin
+
 def get_townhall_email
   @page = Nokogiri::HTML(open("https://www.annuaire-des-mairies.com/val-d-oise.html"))
   townhall_email_array = []
   @pages.xpath()
-  =end
+
+=end
